@@ -28,19 +28,49 @@ However, the remaining flip-flops should be made ready to toggle only when all l
 
 **Procedure**
 
-/* write all the steps invloved */
+• Write and draw th e Digital lo gic system.  
+• Write t he Verilog code for above system .  
+• Enter th e Verilog c ode in Xilinx softwar e.  
+• Check the syntax a nd simulat e the above verilog cod e (using ModelSim or Xilinx) 
+and verify the outp ut waveform as obtain ed.  
+• Implem ent the above code in Spartan II u sing FPGA kit.
 
 **PROGRAM**
-
+```
 /* Program for flipflops and verify its truth table in quartus using Verilog programming. 
 
-Developed by: RegisterNumber:
-*/
+Developed by:Kavidharshini
+RegisterNumber:25012397
+```
+```
+module exp11(out,clk,rst);
+input clk,rst;
+output reg [3:0]out;
+always @ (posedge clk)
+begin
+   if(rst)
+     out<=0;
+   else 
+     out <= out+1;
+end
+endmodule
+```
 
 **RTL LOGIC UP COUNTER**
 
+<img width="462" height="265" alt="image" src="https://github.com/user-attachments/assets/36a1be3f-630e-474a-bc08-d69df3416ea3" />
+
+
 **TIMING DIAGRAM FOR IP COUNTER**
+
+<img width="1008" height="290" alt="image" src="https://github.com/user-attachments/assets/87049dfb-001b-4e57-a8f7-d1c6f1fa9e68" />
+
 
 **TRUTH TABLE**
 
+<img width="1005" height="522" alt="image" src="https://github.com/user-attachments/assets/6d12e7d4-1df8-43b2-b749-e0678d910924" />
+
+
 **RESULTS**
+
+Hence implemented 4 bit synchronous up counter and validate functionality.
